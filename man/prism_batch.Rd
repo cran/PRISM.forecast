@@ -4,9 +4,19 @@
 \alias{prism_batch}
 \title{PRISM stage 2 by batch}
 \usage{
-prism_batch(data, GTdata, var, n.training = 156, UseGoogle = T, alpha = 1,
-  nPred.vec = 0:3, start.date = NULL, n.weeks = NULL, discount = 0.01,
-  sepL1 = F)
+prism_batch(
+  data,
+  GTdata,
+  var,
+  n.training = 156,
+  UseGoogle = T,
+  alpha = 1,
+  nPred.vec = 0:3,
+  start.date = NULL,
+  n.weeks = NULL,
+  discount = 0.015,
+  sepL1 = F
+)
 }
 \arguments{
 \item{data}{time series of interest as xts, last element can be NA. (e.g., unemployment initial claim data in the same period as \code{GTdata}).}
@@ -27,7 +37,7 @@ prism_batch(data, GTdata, var, n.training = 156, UseGoogle = T, alpha = 1,
 
 \item{n.weeks}{the number of weeks in the batch. If NULL, the forecast end at the latest possible date.}
 
-\item{discount}{exponential weighting: (1-discount)^lag (by default = 0.01)}
+\item{discount}{exponential weighting: (1-discount)^lag (by default = 0.015)}
 
 \item{sepL1}{if TRUE, use separate L1 regularization parameters for time series components and exogenous variables (Goolgle Trend data)}
 }

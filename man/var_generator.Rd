@@ -4,8 +4,14 @@
 \alias{var_generator}
 \title{PRISM regressors generator}
 \usage{
-var_generator(data, data.early, stl = TRUE, n.lag = 1:52, s.window = 52,
-  n.history = 700)
+var_generator(
+  data,
+  data.early,
+  stl = TRUE,
+  n.lag = 1:52,
+  s.window = 52,
+  n.history = 700
+)
 }
 \arguments{
 \item{data}{time series of interest as xts, last element can be NA.}

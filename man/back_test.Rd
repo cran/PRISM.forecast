@@ -4,9 +4,18 @@
 \alias{back_test}
 \title{Out-of-sample prediction for whole period}
 \usage{
-back_test(n.lag = 1:52, s.window = 52, n.history = 700, stl = TRUE,
-  n.training = 156, UseGoogle = T, alpha = 1, nPred = 0,
-  discount = 0.01, sepL1 = F)
+back_test(
+  n.lag = 1:52,
+  s.window = 52,
+  n.history = 700,
+  stl = TRUE,
+  n.training = 156,
+  UseGoogle = T,
+  alpha = 1,
+  nPred = 0,
+  discount = 0.015,
+  sepL1 = F
+)
 }
 \arguments{
 \item{n.lag}{the number of lags to be used as regressor in Stage 2 of PRISM (by default = 1:52 for weekly data)}

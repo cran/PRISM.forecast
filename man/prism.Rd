@@ -4,9 +4,19 @@
 \alias{prism}
 \title{PRISM function}
 \usage{
-prism(data, data.early, GTdata, stl = TRUE, n.history = 700,
-  n.training = 156, alpha = 1, UseGoogle = T, nPred.vec = 0:3,
-  discount = 0.01, sepL1 = F)
+prism(
+  data,
+  data.early,
+  GTdata,
+  stl = TRUE,
+  n.history = 700,
+  n.training = 156,
+  alpha = 1,
+  UseGoogle = T,
+  nPred.vec = 0:3,
+  discount = 0.015,
+  sepL1 = F
+)
 }
 \arguments{
 \item{data}{time series of interest as xts, last element can be NA. (e.g., unemployment initial claim data in the same period as \code{GTdata}).}
@@ -27,7 +37,7 @@ prism(data, data.early, GTdata, stl = TRUE, n.history = 700,
 
 \item{nPred.vec}{the number of periods ahead for forecast. nPred.vec could be a vector of intergers. e.g. nPred.vec=0:3 gives results from nowcast to 3-week ahead forecast.}
 
-\item{discount}{exponential weighting: (1-discount)^lag (by default = 0.01).}
+\item{discount}{exponential weighting: (1-discount)^lag (by default = 0.015).}
 
 \item{sepL1}{if TRUE, use separate L1 regularization parameters for time series components and exogenous variables (Goolgle Trend data)}
 }
